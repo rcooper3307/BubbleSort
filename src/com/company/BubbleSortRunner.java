@@ -13,7 +13,7 @@ public class BubbleSortRunner {
 
             System.out.println();
             //Sorting method
-            BubbleSort.bubbleSort(testArr);
+            BubbleSort.BubbleSort(testArr);
 
             //Print of the array after the sort
             System.out.print("After: ");
