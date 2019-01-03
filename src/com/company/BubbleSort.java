@@ -1,7 +1,6 @@
 package com.company;
 
 public class BubbleSort {
-    private int sCounter;
     public static void swap(int[]arr, int x, int y)
     {
       int temp;
@@ -9,21 +8,16 @@ public class BubbleSort {
       arr[x] = arr[y];
       arr[y] = temp;
     }
-    public BubbleSort(int[]arr)
+    public static void bubbleSort(int[]arr)
     {
-        while(sCounter > 0)
-        {
-            for(int i = 0; i < arr.length; i++)
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
             {
-                if(arr[i] > arr[i+1])
+                if(arr[j] < arr[j+1])
                 {
-                    swap(arr,i, i+1);
-                    sCounter++;
+                    swap(arr,j+1, j);
                 }
             }
-        }
-
-
-
     }
 }
