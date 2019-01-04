@@ -10,14 +10,24 @@ public class BubbleSort {
     }
     public static void bubbleSort(int[]arr)
     {
-        int n = arr.length;
-        for (int i = 0; i < n-1; i++)
-            for (int j = 0; j < n-i-1; j++)
+        while(!Check(arr))
+       for(int i = 0; i < (arr.length-1); i++)
+       {
+           if(arr[i] > arr[i+1])
+           {
+               swap(arr,i,i+1);
+           }
+       }
+    }
+    public static boolean Check(int[]arr)
+    {
+        for(int i = 0; i < (arr.length-1); i++)
+        {
+            if(arr[i] > arr[i+1])
             {
-                if(arr[j] < arr[j+1])
-                {
-                    swap(arr,j+1, j);
-                }
+                return false;
             }
+        }
+        return true;
     }
 }
